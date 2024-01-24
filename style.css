@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+*::selection{
+  background-color: var(--first);
+  color: var(---third);
+}
+
+html::-webkit-scrollbar{
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--first);
+}
+html::-webkit-scrollbar-track{
+    background-color: var(---third);
+}
+
+
+/* color variable create */
+:root{
+    --first:#008080;
+    --second:#050505;
+    ---third:#dddbeb;
+}
+
+/* main funtion full web */
+body{
+    background-color: var(--first);
+}
+/*  */
+/* header section */
+.header{
+    padding: 60px;
+    text-align: center;
+    background-color:var(--second) ;
+    /* color: white; */
+    /* border-bottom: 5px solid var(--first); */
+    border: none;
+   
+}
+h1{
+    /* animation: changecolor 10s infinite;  */
+    animation: typing 5s infinite;
+    color: white;
+    font-family: 'Alfa Slab One', serif;
+   
+}
+
+@keyframes changecolor{
+    0%{
+     color:deeppink ;
+   
+    }
+    30%{
+       color: darkblue;
+       transform:scale(1.1); 
+    }
+    60%{
+        color:yellow ;
+        transform: scale(1);
+    }
+    100%{
+       color: darkgreen;
+      
+    }
+}
+
+@keyframes typing{
+    from{
+      opacity: 0;
+    }to{
+       opacity: 1;
+    }
+}
+/* navbar section */
+.navbar{
+   /* background-color: rgb(37, 33, 33); */
+   background-color: #f3b552;
+   display: flex;
+}
+.navbar a{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.navbar a:hover{
+    background-color: white;
+    color: black;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.side{
+    flex: 20%;
+    background-color:var(--first) ;
+    padding: 20px;
+   
+    
+    /* box-shadow:0px 0px 50px grey; */
+
+}
+.profile-icon{
+    border-radius: 20px;
+    object-fit: fill;
+    
+}
+.p-para{
+    color: whitesmoke;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 10px 0px;
+    font-family: 'Sevillana', cursive;
+    
+}
+/* main start */
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    flex: 80%;
+    background-color: var(---third);
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+  
+   
+}
+.content{
+    text-transform: capitalize;
+    width: 40%;
+    margin: 20px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(255,255,255, 0.8);
+}
+#btn{
+   background-color: var(--second);
+   color: white;
+   padding: 10px 15px;
+   text-decoration: none;
+   
+}
+
+#btn:hover{
+    background-color: var(--first);
+}
+/* .fakeimg{
+    background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+} */
+h2{
+    padding: 20px 0px;
+}
+h3{
+    padding:20px 0px;
+    color: white;
+}
+
+img{
+    object-fit: fill;
+    width: 100%;
+}
+p{
+    padding:20px 0px;
+  
+}
+/* main ends */
+/* ol list */
+ul{
+    list-style: none;
+    padding: 20px;
+    color: whitesmoke;
+}
+li{
+    padding:5px 0px;
+    
+}
+/* contact us form */
+.contact{
+    background-color:var(---third);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    /* to align item center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input{
+    padding: 10px 5px;
+    margin: 2px;
+    border-radius: 5px;
+    border: none;
+}
+/* contact ends */
+
+
+/* social media icon */
+ .social-icon{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    
+ }
+/*  */
+.footer{
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: var(--second);
+    border-top: 5px solid var(--first);
+}
+
+h5{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+/* footer ends */
+
+
+
+/* shape divider */
+/* .custom-shape-divider-bottom-1705657525 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1705657525 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1705657525 .shape-fill {
+    /* fill: #FFFFFF; */
+ 
+
+/*  */
+@media screen and (max-width:700px) {
+
+  .row{
+    flex-direction: column;
+  }
+  h1{
+    font-size: 20px;
+  }
+  .content{
+    width: 100%;
+  }
+  .profile-icon{
+    object-fit: fill;
+  }
+}
